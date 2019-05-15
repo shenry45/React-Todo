@@ -1,5 +1,6 @@
 import React from 'react';
-import ToDoList from './components/TodoComponents/ToDoList.js';
+import ToDoList from './components/TodoComponents/ToDoList';
+import ToDoForm from './components/TodoComponents/TodoForm';
 
 const taskList = [
   {
@@ -59,19 +60,13 @@ class App extends React.Component {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <ToDoList list={this.state.curList}/>
-        <form>
-          <input 
-            type="text"
-            value={this.state.task} // reads state task
-            onChange={this.keyHandler} // update state per change
-            placeholder="To Do Task"
-            name="task" // referenced as origin field
-          />
-          <br />
-          <button onClick={this.taskHandler}>Add Task</button>
-          <button onClick={this.clearTasksHandler}>Clear All</button>
-        </form>
+        <ToDoList list={this.state.curList} />
+        <ToDoForm
+          task={this.state.task}
+          changeHandler={this.keyHandler}
+          taskHandler={this.taskHandler}
+          clearTasksHandler={this.clearTasksHandler}
+        />
       </div>
     );
   }
