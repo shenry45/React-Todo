@@ -59,12 +59,7 @@ class App extends React.Component {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-
-        <div className="task-list">
-          {this.state.curList.map(el => ( // () b/c return in React interprets {} as read code and will break line
-            <ToDoList task={el} />
-          ))}
-        </div>
+        <ToDoList list={this.state.curList}/>
         <form>
           <input 
             type="text"
