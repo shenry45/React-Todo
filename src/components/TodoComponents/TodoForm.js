@@ -2,7 +2,7 @@ import React from 'react';
 
 function ToDoForm(props) {
   return (
-    <form>
+    <form onSubmit={props.taskHandler}>
       <input 
         type="text"
         value={props.task} // reads state task

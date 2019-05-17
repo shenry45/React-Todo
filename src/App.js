@@ -2,18 +2,7 @@ import React from 'react';
 import ToDoList from './components/TodoComponents/ToDoList';
 import ToDoForm from './components/TodoComponents/TodoForm';
 
-const taskList = [
-  {
-    task: 'Organize Garage',
-    id: 1528817077286,
-    completed: false
-  },
-  {
-    task: 'Bake Cookies',
-    id: 1528817084358,
-    completed: false
-  }
-];;
+const taskList = [];
 
 class App extends React.Component {
   constructor() {
@@ -25,8 +14,7 @@ class App extends React.Component {
       completed: ""
     }
   }
-
-  keyHandler = e => { // update field target
+ keyHandler = e => { // update field target
     this.setState({ [e.target.name]: e.target.value});
   }
 
