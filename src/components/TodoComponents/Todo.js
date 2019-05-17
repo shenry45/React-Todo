@@ -1,11 +1,9 @@
 import React from 'react';
 
-import './Todo.css';
-
 function ToDo(props) {
   return (
     <div
-      className={`task ${props.todo.completed === true ? 'complete' : ''}`}
+      className={`task ${props.todo.completed === true ? 'completed' : ''}`}
       onClick={() => props.completedHandler(props.id)}
       key={props.id}
     >

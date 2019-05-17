@@ -10,11 +10,15 @@ function ToDoForm(props) {
         placeholder="To Do Task"
         name="task" // referenced as origin field
       />
-      <br />
-      <button onClick={props.taskHandler}>Add Task</button>
-      <button onClick={props.clearTasksHandler}>Clear All</button>
-      <br />
-      <button onClick={props.clearCompletedHandler}>Clear Completed</button>
+      <div className="form-btns">
+        <div>
+          <button onClick={props.taskHandler}>Add Task</button>
+          <button onClick={props.clearTasksHandler}>Clear All</button>
+        </div>
+        <div>
+          <button className="clear-complete" onClick={props.clearCompletedHandler}>Clear Completed</button>
+        </div>
+      </div>
     </form>
   )
 }

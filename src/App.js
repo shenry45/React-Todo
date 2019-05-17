@@ -1,6 +1,7 @@
 import React from 'react';
 import ToDoList from './components/TodoComponents/ToDoList';
 import ToDoForm from './components/TodoComponents/TodoForm';
+import './css/index.css';
 
 const taskList = [];
 
@@ -71,7 +72,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h2>Welcome to your Todo App!</h2>
+        <h2>Tasky</h2>
+        <p>Get your to-do list items all in one place.</p>
         <ToDoList list={this.state.curList} completedHandler={this.completedHandler}/>
         <ToDoForm
           task={this.state.task}
