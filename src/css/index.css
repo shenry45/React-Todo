@@ -41,6 +41,8 @@ p {
   background: #6b6b6b;
   padding: 15px;
   min-height: 400px;
+  max-height: 600px;
+  overflow-y: scroll;
   margin-bottom: 30px;
 }
 .task-list p {
