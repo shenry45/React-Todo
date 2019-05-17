@@ -44,9 +44,15 @@ class App extends React.Component {
     })
   }
 
-  completedHandler = taskId => {
-    console.log("id: ", taskId)
-    
+  clearCompletedHandler = e => {
+    e.preventDefault(); // stop page refresh bc button
+
+    this.setState({
+      curList: this.state.curList.filter(task => !task.completed)
+    })
+  }
+
+  completedHandler = taskId => {    
     this.setState({
       curList: this.state.curList.map(task => { // maps through curList for item clicked based on id
         if (taskId === task.id) { // check if click id matches task id from curList
@@ -72,6 +78,7 @@ class App extends React.Component {
           changeHandler={this.keyHandler}
           taskHandler={this.taskHandler}
           clearTasksHandler={this.clearTasksHandler}
+          clearCompletedHandler={this.clearCompletedHandler}
         />
       </div>
     );

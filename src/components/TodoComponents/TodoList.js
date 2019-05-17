@@ -8,6 +8,7 @@ function ToDoList(props) {
         <ToDo  // key used for error bug
           todo={el}
           id={el.id}
+          key={el.id}
           completedHandler={props.completedHandler}
         />
       ))}
