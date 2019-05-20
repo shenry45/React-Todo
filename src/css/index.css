@@ -1,0 +1,85 @@
+html {
+  font-size: 62.5%;
+}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #fff;
+  width: 650px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1 {
+  font-size: 3.6rem;
+}
+h2 {
+  font-size: 3rem;
+}
+p {
+  font-size: 1.8rem;
+}
+.task-list {
+  background: #6b6b6b;
+  padding: 15px;
+  min-height: 400px;
+  max-height: 600px;
+  overflow-y: scroll;
+  margin-bottom: 30px;
+}
+.task-list p {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+  border: 2px solid #989898;
+}
+.task-list .completed p {
+  background: #cacaca;
+  text-decoration: line-through;
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+form .form-btns {
+  display: flex;
+  flex-flow: column nowrap;
+}
+form .form-btns div {
+  display: flex;
+  flex-flow: row nowrap;
+}
+form .form-btns div .clear-complete {
+  width: 100%;
+}
+button {
+  cursor: pointer;
+  background: linear-gradient(to bottom right, #ff0, #f00);
+  padding: 10px;
+  border: 2px solid #000;
+}
+button:hover {
+  background: #f00;
+  color: #fff;
+}
